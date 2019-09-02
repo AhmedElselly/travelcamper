@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TravelCamper | Elselly</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <nav>
+      <h1><a href="/">TravelCamper</a></h1>
+      <a href="/campgrounds">Campgrounds</a>
+      <% if(!currentUser){ %>
+            <a href="/login">Login</a>
+            <a href="/register">Sign Up</a>
+    <% } else { %>
+            <li><a href="#">Signed in as <%= currentUser.username %></a></li>
+            <a href="/logout">Logout</a>
+  <% } %>
+
+
+    </nav>

@@ -1,0 +1,18 @@
+<% include ../partials/header %>
+
+<header class="header">
+    <a href="/campgrounds/new">Add New Campground</a>
+</header>
+<section class="container">
+<h1 class="campgrounds">Campgrounds</h1>
+<% campgroundVar.forEach(function(campground){ %>
+        <div class="inner-container">
+            <h4 class="title"><%= campground.name %></h4>
+            <img src="<%= campground.image %>">
+            <p class="desc"><%= campground.description %></p>
+            <p class="last-p"><a href="/campgrounds/<%= campground._id %>">Show More!</a></p>
+        </div>
+
+<% }); %>
+</section>
+<% include ../partials/footer %>

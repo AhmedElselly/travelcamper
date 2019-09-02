@@ -1,0 +1,12 @@
+<% include ../partials/header %>
+<div class="adding-camp">
+  <h1>Edit <%= campgroundVar.name %></h1>
+  <form class="adding-container" action="/campgrounds/<%= campgroundVar._id %>?_method=PUT" method="post">
+    <input type="text" name="campground[name]" value="<%= campgroundVar.name %>">
+    <input type="number" name="campground[price]" value="<%= campgroundVar.price %>" placeholder="Price" min="0.01" step="0.01">
+    <input type="text" name="campground[image]" value="<%= campgroundVar.image %>">
+    <input type="text" name="campground[description]" value="<%= campgroundVar.description %>">
+    <input type="submit" name="button" value="Edit Campground!" class="adding-button">
+  </form>
+</div>
+<% include ../partials/footer %>

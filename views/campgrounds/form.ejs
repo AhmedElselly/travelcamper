@@ -1,0 +1,11 @@
+<% include ../partials/header %>
+<div class="adding-camp">
+  <form class="adding-container" action="/campgrounds" method="post">
+    <input type="text" name="name" placeholder="Title">
+    <input type="number" name="price" placeholder="Price" min="0.01" step="0.01">
+    <input type="text" name="image" placeholder="Image URL">
+    <input type="text" name="description" placeholder="Description">
+    <input type="submit" name="button" value="Add Campground" class="adding-button">
+  </form>
+</div>
+<% include ../partials/footer %>
